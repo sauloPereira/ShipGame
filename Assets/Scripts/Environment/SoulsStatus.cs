@@ -11,7 +11,7 @@ public class SoulsStatus : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D other) {
 
         if (other.gameObject.tag.Equals("Player")) {
-
+            getSouls();
 
         }
 
@@ -21,7 +21,7 @@ public class SoulsStatus : MonoBehaviour {
         var person = GameObject.FindWithTag("Player").GetComponent<IPersons>();
         status = person.getStatus();
 
-        person.addPoints(status.getCurrentPoints());
+        person.addPoints(points);
 
         return points;
 

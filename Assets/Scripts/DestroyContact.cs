@@ -5,8 +5,6 @@ using UnityEngine;
 public class DestroyContact : MonoBehaviour {
 
     public GameObject prefab;
-    public GameObject prefabExplosion;
-
 
     public void OnTriggerEnter2D(Collider2D other) {
 
@@ -41,10 +39,6 @@ public class DestroyContact : MonoBehaviour {
 
     public void InstantPrefab () {
         Instantiate(prefab, transform.position, transform.rotation);
-
-    }
-    public void PrefabExplosion() {
-        Instantiate(prefabExplosion, transform.position, transform.rotation);
 
     }
 

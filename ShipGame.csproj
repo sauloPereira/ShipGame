@@ -99,8 +99,10 @@
     <Compile Include="Assets\Scripts\Environment\LifeStatus.cs" />
     <Compile Include="Assets\Scripts\Environment\Parallax.cs" />
     <Compile Include="Assets\Scripts\Environment\RandomRotation.cs" />
+    <Compile Include="Assets\Scripts\Environment\RecoverPointsStatus.cs" />
     <Compile Include="Assets\Scripts\Environment\SoulsStatus.cs" />
     <Compile Include="Assets\Scripts\Environment\SpawnObjects.cs" />
+    <Compile Include="Assets\Scripts\ExplosionPlayer.cs" />
     <Compile Include="Assets\Scripts\FallowPlayer.cs" />
     <Compile Include="Assets\Scripts\HUD.cs" />
     <Compile Include="Assets\Scripts\IPersons.cs" />

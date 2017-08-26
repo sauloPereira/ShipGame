@@ -130,7 +130,9 @@ public class Status {
     }
 
     public void recoverPoints(int valor) {
-        valor = this.points;
+        points = currentPoints;
+        valor = points;
+
     }
 
     public void addExp(int valor) {

@@ -7,13 +7,16 @@ public abstract class EnemyBehaviour : MonoBehaviour, IEnemy {
 
     protected float velocityEnemy = 2;
     protected Status status;
+    public GameObject souls;
     
     protected virtual void Awake() {
 
         this.gameObject.tag = "Enemy";
         this.gameObject.layer = 9;
 
-        status = new Status(20, 5, 0, 20); // HP | Force | Fuel | Souls(points)
+        //int points = souls.getSouls();
+
+        status = new Status(20, 5, 0, 0); // HP | Force | Fuel | Souls(points)
 
     }
 
@@ -28,6 +31,9 @@ public abstract class EnemyBehaviour : MonoBehaviour, IEnemy {
         status.inDamage(damage);
         if (status.isDead()) {
             Destroy(this.gameObject);
+
+            Instantiate(souls, transform.position, transform.rotation);
+
         }
         else {
             GetComponent<SpriteRenderer>().color = Color.red;

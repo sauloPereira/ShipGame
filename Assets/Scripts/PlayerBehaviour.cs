@@ -19,9 +19,6 @@ public class PlayerBehaviour : MonoBehaviour, IPersons {
 
     protected Status status;
     protected SoulsStatus soulsStatus;
-    //protected LifeStatus life;
-    //protected FuelStatus fuel;
-    //protected HUD hud;
 
     public GameObject prefabImpacto;
     public GameObject prefabExplosion;
@@ -58,7 +55,7 @@ public class PlayerBehaviour : MonoBehaviour, IPersons {
 
 	void Update () {
 
-        Move();  
+        Move();
        
     }
 
@@ -354,7 +351,7 @@ public class PlayerBehaviour : MonoBehaviour, IPersons {
         }
 
         if (other.tag == "points") {
-            //addPoints(soulsStatus.getSouls());
+            
         }
 
         //==========Damage================
@@ -371,16 +368,16 @@ public class PlayerBehaviour : MonoBehaviour, IPersons {
         return status;
     }
 
-    //public void 
-
     public void ReceiveDamage(int damage) {
         status.inDamage(damage);
 
         if (status.isDead()) {
             isDead();
-            
+
         }
-        else {
+
+        else
+        {
             PrefabImpact();
 
         }
@@ -400,12 +397,14 @@ public class PlayerBehaviour : MonoBehaviour, IPersons {
 
     public void isDead() {
         if (status.isDead()) {
-            PrefabExplosion();
-            Destroy(player);
+            //Destroy(player.gameObject);
             enabled = false;
-
+            prefabExplosion.SetActive(true);
+            PrefabExplosion();
         }
-    
+        player.SetActive(false);
+        prefabExplosion.SetActive(false);
+
     }
 
     public void recoverHP(int valor) {
@@ -425,7 +424,7 @@ public class PlayerBehaviour : MonoBehaviour, IPersons {
 
     public void PrefabExplosion() {
         Instantiate(prefabExplosion, transform.position, transform.rotation);
-
+        
     }
 
     public void addPoints(int souls) {
@@ -433,6 +432,6 @@ public class PlayerBehaviour : MonoBehaviour, IPersons {
     }
 
     public void recoverSouls(int valor) {
-        throw new NotImplementedException();
+        status.recoverPoints(valor);
     }
 }

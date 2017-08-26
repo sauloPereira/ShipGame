@@ -32,12 +32,12 @@ public class HUD : MonoBehaviour {
 	
 	void Update () {
 
-        pointsText.text = "000000" + status.getCurrentPoints();
+        pointsText.text = "" + status.getCurrentPoints();
 
         sliderHP.value = status.getHP();
         sliderFuel.value = status.getFuel();
 
-        //ConsumeFuel();  Script será corrigido depois para o uso da mecanica de COMBUSTIVEL
+        //ConsumeFuel();  Metodo será corrigido depois para o uso da mecanica de COMBUSTIVEL
 
 
 	}
