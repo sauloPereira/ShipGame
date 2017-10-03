@@ -16,7 +16,7 @@ public class HUD : MonoBehaviour {
     protected float hp;
 
     protected Status status;
-    protected PlayerBehaviour player;
+    public PlayerBehaviour player;
 
 	void Start () {
 
@@ -33,6 +33,7 @@ public class HUD : MonoBehaviour {
 	void Update () {
 
         pointsText.text = "" + status.getCurrentPoints();
+        bombsText.text = "0" + player.numBomb;
 
         sliderHP.value = status.getHP();
         sliderFuel.value = status.getFuel();

@@ -14,13 +14,9 @@ public class Gun : MonoBehaviour {
   
     void Start() {
         //StartCoroutine(Shot()); //forma de chamar metodo atraves de Courotine
-
-
-
     }
   
-    void Update()
-    {
+    void Update() {
 
         currentFireRateTime += Time.deltaTime; // count for rateFire
 

@@ -17,6 +17,7 @@ TagManager:
   - fuel
   - Boundary
   - points
+  - bomb
   layers:
   - Default
   - TransparentFX

@@ -180,6 +180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fadcaeb7f25b0a34ba63232310a3bdc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  souls: {fileID: 1679267418957622, guid: fcc4e02d40f68564b8be2125a91b9df1, type: 2}
   speed: 10
   speedMove: 2
   posRight: 1.3
@@ -195,7 +196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a54631a925f37e4b92d1c257b5190f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabBulletEnemy: {fileID: 1684604718646316, guid: 667f9d02c3a92384dae91841cf0d89db,
+  prefabBulletEnemy: {fileID: 1684604718646316, guid: 5e8107c09157d6942bbdd2885ee5ed09,
     type: 2}
   gunEnemy: {fileID: 1596002717345240}
   damageEnemy: 0
@@ -212,7 +213,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1623569236991548, guid: 27d78dbac2c103a449b4a64e4c051a03, type: 2}
-  prefabExplosion: {fileID: 0}
 --- !u!198 &198675006664240198
 ParticleSystem:
   m_ObjectHideFlags: 1

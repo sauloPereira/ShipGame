@@ -23,9 +23,10 @@ GameObject:
   - component: {fileID: 70455821899043512}
   - component: {fileID: 114110541839803346}
   - component: {fileID: 50012411999537528}
+  - component: {fileID: 114887269837624530}
   m_Layer: 0
   m_Name: LaserGun
-  m_TagString: Untagged
+  m_TagString: laser
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -58,9 +59,10 @@ GameObject:
   - component: {fileID: 70590216033583216}
   - component: {fileID: 114824343758242216}
   - component: {fileID: 50961424034860436}
+  - component: {fileID: 114975720437668332}
   m_Layer: 0
   m_Name: LaserGun (1)
-  m_TagString: Untagged
+  m_TagString: laser
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -77,9 +79,10 @@ GameObject:
   - component: {fileID: 70691086548482418}
   - component: {fileID: 114894192212528540}
   - component: {fileID: 50419085358582842}
+  - component: {fileID: 114380612216991624}
   m_Layer: 0
   m_Name: LaserGun (2)
-  m_TagString: Untagged
+  m_TagString: laser
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -269,6 +272,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifeTime: 10
+--- !u!114 &114380612216991624
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1714938734652054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 938013aee2cf360469dce43b42b60486, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  strength: 20
 --- !u!114 &114824343758242216
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -282,6 +297,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: 5
   limit: 0
+--- !u!114 &114887269837624530
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1062162840568730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 938013aee2cf360469dce43b42b60486, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  strength: 20
 --- !u!114 &114894192212528540
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -295,6 +322,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: 5
   limit: 0
+--- !u!114 &114975720437668332
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1619830522584262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 938013aee2cf360469dce43b42b60486, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  strength: 20
 --- !u!212 &212069714529468704
 SpriteRenderer:
   m_ObjectHideFlags: 1

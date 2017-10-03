@@ -102,7 +102,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1623569236991548, guid: 27d78dbac2c103a449b4a64e4c051a03, type: 2}
-  prefabExplosion: {fileID: 0}
 --- !u!114 &114260167602401088
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -138,7 +137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27543b6a5ec53834590f01a8fc760dd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  souls: {fileID: 1707267840929234, guid: 7cf0ae8bb180edc4cbef78493928f34c, type: 2}
+  souls: {fileID: 1707267840929234, guid: 85193600ce75d564ca295f9451031858, type: 2}
 --- !u!114 &114887133925950940
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -39,7 +39,11 @@ public class PlayerBehaviour : MonoBehaviour, IPersons {
     public GameObject blastB;
     public GameObject blastBII;
     public GameObject blastBIII;
+    [Space(10)]
+    public GameObject bomb;
+    public int numBomb;
 
+    public bool bulletIII = false;
 
     void Awake() {
 
@@ -56,7 +60,7 @@ public class PlayerBehaviour : MonoBehaviour, IPersons {
 	void Update () {
 
         Move();
-       
+
     }
 
     void Move() {
@@ -83,7 +87,6 @@ public class PlayerBehaviour : MonoBehaviour, IPersons {
                     Mathf.Clamp(transform.position.y, limits.yMin, limits.yMax),
                     0f
                 );
-
         */
     }
 
@@ -147,6 +150,8 @@ public class PlayerBehaviour : MonoBehaviour, IPersons {
                 laserB.SetActive(false);
                 laserBII.SetActive(false);
                 laserBIII.SetActive(false);
+
+                bulletIII = true;
 
             }
 
@@ -354,6 +359,11 @@ public class PlayerBehaviour : MonoBehaviour, IPersons {
             
         }
 
+        if (other.tag == "bomb") {
+            addBomb();
+
+        }
+
         //==========Damage================
 
         if (other.tag == "Enemy") {
@@ -376,13 +386,17 @@ public class PlayerBehaviour : MonoBehaviour, IPersons {
 
         }
 
-        else
-        {
+        else {
             PrefabImpact();
 
         }
 
     }
+
+    public int addBomb() {
+        return numBomb++;
+    }
+
     /*
     public void consumeFuel(float fuel) {
         status.consumeFuel(fuel);
@@ -433,5 +447,9 @@ public class PlayerBehaviour : MonoBehaviour, IPersons {
 
     public void recoverSouls(int valor) {
         status.recoverPoints(valor);
+    }
+
+    public GameObject getPerson() {
+        return player;
     }
 }

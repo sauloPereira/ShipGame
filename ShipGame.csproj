@@ -78,12 +78,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Bomb.cs" />
     <Compile Include="Assets\Scripts\Bullet\Bullet.cs" />
     <Compile Include="Assets\Scripts\Bullet\BulletBehaviour.cs" />
+    <Compile Include="Assets\Scripts\Bullet\BulletEnemy.cs" />
     <Compile Include="Assets\Scripts\Bullet\Gun.cs" />
     <Compile Include="Assets\Scripts\Bullet\LifeTimeProjectles.cs" />
     <Compile Include="Assets\Scripts\Bullet\UpBulletBehaviour.cs" />
+    <Compile Include="Assets\Scripts\Controller\GCCamera.cs" />
+    <Compile Include="Assets\Scripts\Controller\GCFases.cs" />
+    <Compile Include="Assets\Scripts\Controller\GCJogo.cs" />
     <Compile Include="Assets\Scripts\Controller\GCLevel.cs" />
+    <Compile Include="Assets\Scripts\Controller\GCMainMenu.cs" />
+    <Compile Include="Assets\Scripts\Controller\GCPause.cs" />
+    <Compile Include="Assets\Scripts\Controller\GCPerson.cs" />
+    <Compile Include="Assets\Scripts\Controller\GCShop.cs" />
+    <Compile Include="Assets\Scripts\Controller\GameStatus.cs" />
     <Compile Include="Assets\Scripts\DestroyContact.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyBehaviour.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyBehaviourII.cs" />

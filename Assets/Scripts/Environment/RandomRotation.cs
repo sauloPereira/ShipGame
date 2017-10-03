@@ -6,11 +6,14 @@ public class RandomRotation : MonoBehaviour {
 
     public float speedRotation;
 
-	void Update () {
+	void Update ()
+    {
+        Rotate();
 
+    }
+
+    private void Rotate()
+    {
         transform.RotateAroundLocal(Vector3.forward, speedRotation * Time.deltaTime);
-
-
-
-	}
+    }
 }

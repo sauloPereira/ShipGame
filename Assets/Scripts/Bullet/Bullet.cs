@@ -5,7 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour {
 
     public int strength;
-    public int damage;
+    //public int damage;
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.tag.Equals("Enemy")) {
@@ -14,11 +14,7 @@ public class Bullet : MonoBehaviour {
             Destroy(gameObject);
 
         }
-
-        else if (other.gameObject.tag.Equals("Player")) {
-            var person = other.gameObject.GetComponent<IPersons>();
-            person.ReceiveDamage(damage);
-
-        }
+        
     }
+
 }

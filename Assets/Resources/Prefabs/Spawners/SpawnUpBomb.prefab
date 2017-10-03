@@ -55,5 +55,5 @@ MonoBehaviour:
   minWidth: -1.55
   medianWidth: 0
   maxWidth: 1.55
-  rateSpawn: 3
+  rateSpawn: 200
   prefab: {fileID: 1846093690282738, guid: 4d06b2a095eebc741a2f1ceeb4c5d010, type: 2}

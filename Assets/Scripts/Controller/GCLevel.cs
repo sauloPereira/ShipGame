@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
+
 
 public class GCLevel : MonoBehaviour {
 
@@ -10,17 +12,18 @@ public class GCLevel : MonoBehaviour {
 
     private float timeRecoverPoints;
     protected Status status;
-    public PlayerBehaviour player;
     public GameObject recoverSouls;
 
-    private bool inDead = true;
+    public PlayerBehaviour player;
 
-    public float changeSpawnBullet;
+    private bool inDead = true;
 
     private float currentTime;
 
     public GameObject bombs;
     public GameObject[] enemies;
+    [Space(10)]
+    public float changeSpawnBullet;
     public GameObject[] bullets;
     public GameObject boss;
 
@@ -54,13 +57,13 @@ public class GCLevel : MonoBehaviour {
             bullets[0].SetActive(true);
             bullets[1].SetActive(false);
         }
-        if (currentTime >= changeSpawnBullet) {//>480
+        if (currentTime >= changeSpawnBullet || player.bulletIII == true) {//>480
             bullets[1].SetActive(true);
             bullets[0].SetActive(false);
         }
         //Bombs
         if (currentTime >= 120) {
-
+            bombs.SetActive(true);
 
         }
 
@@ -68,8 +71,6 @@ public class GCLevel : MonoBehaviour {
 
         if (status.isDead()) {
 
-            
-            PlayerPrefs.SetFloat("", timeRecoverPoints);
             timeRecoverPoints = currentTime;
 
             if (!status.isDead() && currentTime == timeRecoverPoints) {
@@ -81,15 +82,5 @@ public class GCLevel : MonoBehaviour {
         }
         
 	}
-    /*
-    public bool getDie() {
 
-        //var person = GameObject.FindWithTag("Player").GetComponent<IPersons>();
-        status = player.getStatus();//getStatus();
-
-        status.isDead();
-
-        return true;
-    }
-    */
 }
