@@ -56,4 +56,5 @@ MonoBehaviour:
   gun: {fileID: 1419472139284784}
   particleBomb: {fileID: 1898121251350726, guid: a79339c92038b984babd4719e8ffb4c0,
     type: 2}
-  fireRateTime: 0.1
+  fireRateTime: 0.08
+  lenghtPower: 0

@@ -16,7 +16,7 @@ public abstract class EnemyBehaviour : MonoBehaviour, IEnemy {
 
         //int points = souls.getSouls();
 
-        status = new Status(20, 5, 0, 0); // HP | Force | Fuel | Souls(points)
+        status = new Status(20, 0, 5, 0, 0); // HP | Endurence | Force | xFuelx | Souls(points)
 
     }
 

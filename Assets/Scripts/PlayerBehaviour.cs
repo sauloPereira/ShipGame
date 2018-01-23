@@ -6,7 +6,7 @@ using UnityEngine;
 [System.Serializable]
 public class Limits {
 
-    public float xMin, xMax, yMin, yMax;
+    public float xMin, xMax, yMin, yMax; //-2.8, 2.8, -4.7, 4.3 Portrait 16:10
 
 }
 
@@ -44,22 +44,38 @@ public class PlayerBehaviour : MonoBehaviour, IPersons {
     public int numBomb;
 
     public bool bulletIII = false;
+    public bool unableComand = false;
 
     void Awake() {
 
-        status = new Status(50, 5, 20, 0);
+        status = new Status(50, 3, 5, 20, 0); // HP | Endurence | Strenght | xFuelx | Souls |
 
     }
 
-    void Start () {
-    
+    void Start() {
+        
+        //if (!status.isDead()) { 
+            DontDestroyOnLoad(this.gameObject);
+
+            if (FindObjectsOfType<PlayerBehaviour>().Length > 1)
+                Destroy(gameObject);
+
         transform.position = new Vector3(0f, -3.96f, 0f);
 
 	}
 
 	void Update () {
 
-        Move();
+        if (unableComand) {
+            GetComponent<Rigidbody2D>().isKinematic = true;
+            bulletB.SetActive(false);
+        }
+
+        else {  
+            GetComponent<Rigidbody2D>().isKinematic = false;
+            Move();
+            
+        }
 
     }
 
@@ -411,10 +427,10 @@ public class PlayerBehaviour : MonoBehaviour, IPersons {
 
     public void isDead() {
         if (status.isDead()) {
-            //Destroy(player.gameObject);
             enabled = false;
             prefabExplosion.SetActive(true);
             PrefabExplosion();
+            Debug.Log("MORREU!");
         }
         player.SetActive(false);
         prefabExplosion.SetActive(false);
@@ -449,7 +465,8 @@ public class PlayerBehaviour : MonoBehaviour, IPersons {
         status.recoverPoints(valor);
     }
 
-    public GameObject getPerson() {
-        return player;
+    public string getPerson() {
+        return this.gameObject.name;
     }
+
 }

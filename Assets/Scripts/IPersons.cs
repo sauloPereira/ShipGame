@@ -11,6 +11,6 @@ public interface IPersons {
     void addPoints(int souls);
     void recoverSouls(int valor);
     void isDead();
-    GameObject getPerson();
+    string getPerson();
 
 }

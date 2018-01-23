@@ -8,8 +8,8 @@ public class GameStatus : MonoBehaviour {
 
     public int enableLevel;
     public Status status;
-    //public string player;
+    public string player;
 
-    public IPersons player;
+    //public IPersons player;
 
 }

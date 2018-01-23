@@ -7,7 +7,7 @@ public class Bomb : MonoBehaviour {
 
     public GameObject prefabBullet;
     public GameObject gun;
-    public GameObject particleBomb;
+    private GameObject particleBomb;
     public float fireRateTime;
     private float currentFireRateTime;
     public float lenghtPower;
@@ -16,7 +16,11 @@ public class Bomb : MonoBehaviour {
 
     void Start() {
         //StartCoroutine(Shot()); //forma de chamar metodo atraves de Courotine
+        //var bombP = GameObject.FindWithTag("ParticleBomb");
+        particleBomb = GameObject.FindWithTag("ParticleBomb");
+
         particleBomb.SetActive(false);
+
     }
 
     void Update() {
@@ -27,7 +31,8 @@ public class Bomb : MonoBehaviour {
         // count for rateFire
         currentFireRateTime += Time.deltaTime;
 
-        particleBomb.transform.position = new Vector3(gun.transform.position.x - 0.4f, gun.transform.position.y, 0);
+        particleBomb.transform.position = new Vector3
+            (gun.transform.position.x - 0.4f, gun.transform.position.y, 0);
 
         if (currentFireRateTime > fireRateTime && player.numBomb > 0) {
             canFire = true;
@@ -42,6 +47,7 @@ public class Bomb : MonoBehaviour {
             lenghtPower += Time.deltaTime;
 
             particleBomb.SetActive(true);
+            particleBomb = GameObject.FindWithTag("ParticleBomb");
             StartCoroutine(Shot());
             currentFireRateTime = 0;
             

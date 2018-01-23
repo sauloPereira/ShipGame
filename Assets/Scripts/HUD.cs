@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-[System.Serializable]
+[System.Serializable] // persistir no estado do 9objeto de alguma forma.
 public class HUD : MonoBehaviour {
 
     public Slider sliderHP;
@@ -11,6 +11,8 @@ public class HUD : MonoBehaviour {
 
     public Text pointsText;
     public Text bombsText;
+
+    private GameObject pDead;
 
     protected float fuel;
     protected float hp;
@@ -20,13 +22,18 @@ public class HUD : MonoBehaviour {
 
 	void Start () {
 
+        pDead = GameObject.FindWithTag("PanelGameOver");
+
         var person = GameObject.FindWithTag("Player").GetComponent<IPersons>();
+        player = FindObjectOfType<PlayerBehaviour>();
         status = person.getStatus();
         sliderHP.maxValue = status.getHPMax();
         sliderFuel.maxValue = status.getFuelMax();
 
         hp = status.getHP();
         fuel = status.getFuel();
+
+        pDead.SetActive(false);
 
     }
 	
@@ -38,11 +45,12 @@ public class HUD : MonoBehaviour {
         sliderHP.value = status.getHP();
         sliderFuel.value = status.getFuel();
 
-        //ConsumeFuel();  Metodo será corrigido depois para o uso da mecanica de COMBUSTIVEL
-
+        if (status.isDead()) {
+            pDead.SetActive(true);
+        }
 
 	}
-
+      //ConsumeFuel();  Metodo será corrigido depois para o uso da mecanica de COMBUSTIVEL
     public void ConsumeFuel() {
     
         fuel -= Time.deltaTime;
@@ -65,6 +73,5 @@ public class HUD : MonoBehaviour {
         }
   
     }
-
 
 }

@@ -9,7 +9,7 @@ public class Gun : MonoBehaviour {
     public int damage;
     public float fireRateTime;
     private float currentFireRateTime;
-    private bool canFire;
+    public bool canFire;
 
   
     void Start() {

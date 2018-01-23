@@ -7,7 +7,7 @@ public class MeteoroStatus : EnemyBehaviour {
 
     protected override void Awake() {
 
-        status = new Status(30, 1, 0, 0);
+        status = new Status(30, 0, 1, 0, 0);
         
     }
 

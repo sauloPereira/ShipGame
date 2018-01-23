@@ -18,6 +18,8 @@ TagManager:
   - Boundary
   - points
   - bomb
+  - ParticleBomb
+  - PanelGameOver
   layers:
   - Default
   - TransparentFX

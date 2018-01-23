@@ -4,20 +4,12 @@ using UnityEngine;
 
 [System.Serializable]
 public class Status {
-    /*
-    private int nivel;
-    private int life;
-    private int fuel;
-    private int endurence;
-    private int speed;
-    private int force;
-    private int resistance;
-    */
 
     private int hp;
     private int hpMax;
     private int mp;
     private int mpMax;
+    private int endurence;
     private float fuel;
     private float fuelMax;
     private int ataque;
@@ -25,13 +17,15 @@ public class Status {
     private int points;
     private int exp = 1;
     private int nivel = 1;
+    private int required = 1005;
 
     public Status() { }
 
-    public Status(int newHP, int newAttack, float newFuel, int newPoints) {
+    public Status(int newHP, int newEndurence, int newAttack, float newFuel, int newPoints) {
 
         this.hpMax = this.hp = newHP;
         this.fuelMax = this.fuel = newFuel;
+        endurence = newEndurence;
         this.ataque = newAttack;
         this.points = newPoints;
 
@@ -43,6 +37,10 @@ public class Status {
 
     public int getHPMax() {
         return hpMax;
+    }
+
+    public int getEndurence() {
+        return endurence;
     }
 
     public float getFuel() {
@@ -63,6 +61,18 @@ public class Status {
 
     public int getPoints() {
         return points;
+    }
+
+    public int getExp() {
+        return exp;
+    }
+
+    public int getNivel() {
+        return nivel;
+    }
+
+    public int getRequired() {
+        return required;
     }
 
     //=====================
@@ -91,8 +101,24 @@ public class Status {
 
     }
 
+    public void setEndurence(int endurence) {
+        this.endurence = endurence;
+    }
+
     public void setAttack(int ataque) {
         this.ataque = ataque;
+
+    }
+
+    public void setExp(int exp) {
+        this.exp = exp;
+        this.nivel = (int)System.Math.Ceiling(exp / 100.00);
+
+    }
+
+    public void setRequired(int required) {
+        this.required = required;
+        this.required = (int)System.Math.Ceiling(exp / 100.00);
 
     }
 

@@ -9,10 +9,26 @@ public class GCMainMenu : MonoBehaviour {
     public GameObject optionsP;
     public new GCCamera camera;
 
+    public IPersons person;
+
+
+    public void Start() {
+
+        person = GetComponentInChildren<IPersons>();
+
+    }
+
     public void NewGame() {
+        /*
+        var gcGame = FindObjectOfType<GCJogo>();
+        
 
+        var status = person.getStatus();
+        var prefabPerson = person.getPerson();
+        gcGame.newGame(status, prefabPerson);
+        */
         SceneManager.LoadScene("FasesMenu");
-
+        
     }
 
     public void Shop() {

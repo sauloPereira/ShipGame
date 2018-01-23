@@ -706,7 +706,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 01
+  m_Text: 00
 --- !u!222 &234139460
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -884,7 +884,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 01
+  m_Text: 00
 --- !u!222 &287746345
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1815,7 +1815,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &824853963
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2758,6 +2758,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5732e05e77c965c48971c8119c42abbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  souls: {fileID: 287746344}
+  required: {fileID: 234139459}
+  textHP: {fileID: 176347541}
+  textEndurence: {fileID: 889433902}
+  textSpeed: {fileID: 1179482829}
+  textStrength: {fileID: 291663433}
 --- !u!4 &1822404682
 Transform:
   m_ObjectHideFlags: 0
